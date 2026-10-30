@@ -1,0 +1,22 @@
+{
+  "name": "cherry_site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiang-ning/cherry_site.git"
+  },
+  "keywords": [],
+  "author": "Jiang Ning",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiang-ning/cherry_site/issues"
+  },
+  "homepage": "https://github.com/jiang-ning/cherry_site#readme",
+  "description": "CherryQuery marketing site",
+  "type": "commonjs",
+  "private": true
+}
