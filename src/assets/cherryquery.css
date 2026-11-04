@@ -355,6 +355,81 @@ mark {
   background: #fff;
 }
 
+/* AI Mode - the colorful ring and glow match the app's AI Mode */
+@property --ai-glow-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes ai-glow-spin { to { --ai-glow-angle: 360deg; } }
+.ai-band {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 3.5rem);
+}
+.ai-band h2 {
+  margin: 0 0 .7rem;
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  line-height: 1.1;
+  letter-spacing: -.035em;
+}
+.ai-lead { margin: 0; color: var(--muted); font-size: 1.08rem; }
+.ai-band .chips li { background: var(--sun-soft); }
+.ai-glow {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  border-radius: 30px;
+}
+.ai-glow::before,
+.ai-glow::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--ai-glow-angle),
+    #4285f4,
+    #9b72cb,
+    #d96570,
+    #f4b400,
+    #0f9d58,
+    #4285f4
+  );
+  animation: ai-glow-spin 4s linear infinite;
+  pointer-events: none;
+}
+.ai-glow::before { z-index: -1; }
+.ai-glow::after { z-index: -2; filter: blur(14px); opacity: .6; }
+.ai-glow .app-window { border-color: transparent; box-shadow: none; }
+.ai-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+  padding: 8px 10px;
+  border-radius: 26px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #1f1f1f;
+  box-shadow: inset 0 2px 1px #4a263833;
+  /* The white layer softens the colors so the label stays readable. */
+  background:
+    linear-gradient(#ffffff99, #ffffff99),
+    conic-gradient(
+      from var(--ai-glow-angle),
+      #4285f4,
+      #9b72cb,
+      #d96570,
+      #f4b400,
+      #0f9d58,
+      #4285f4
+    );
+  animation: ai-glow-spin 4s linear infinite;
+}
+.ai-pill svg { width: 16px; height: 16px; }
+
 /* File types */
 .types-band { background: rgba(255, 255, 255, .55); border-block: 1px solid var(--line); }
 .types {
@@ -535,6 +610,7 @@ mark {
   .hero-art { max-width: 340px; }
   .features { grid-template-columns: repeat(2, 1fr); }
   .ocr-band { grid-template-columns: 1fr; }
+  .ai-band { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
   body { font-size: 16px; }
@@ -552,4 +628,5 @@ mark {
   .btn { transition: none; }
   .btn:hover { transform: none; }
   .app-search .caret { animation: none; }
+  .ai-glow::before, .ai-glow::after, .ai-pill { animation: none; }
 }

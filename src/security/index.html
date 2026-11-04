@@ -50,7 +50,13 @@
             <tr><th scope="col">Version</th><th scope="col">Supported</th></tr>
           </thead>
           <tbody>
-            <tr><td>1.0.x</td><td><span class="ok" role="img" aria-label="Supported">&#10004;</span></td></tr>
+            <tr>
+              <td>1.2.x</td><td><span class="ok" role="img" aria-label="Supported">&#10004;</span></td>
+            </tr>
+            <tr>
+              <td>&lt; 1.2</td>
+              <td><span role="img" aria-label="Not supported">&#10008;</span></td>
+            </tr>
           </tbody>
         </table>
 
@@ -63,9 +69,10 @@
           <li>Leakage of indexed content or search queries off the device.</li>
           <li>Code execution through crafted documents (for example <code>.docx</code>, <code>.xlsx</code>, <code>.pptx</code>, <code>.pdf</code>, <code>.odt</code>, or <code>.rtf</code> files).</li>
           <li>Weaknesses in the Electron renderer, preload script, or IPC handlers.</li>
+          <li>Tampering with the AI Mode model download, or loading model files from outside CherryQuery's application data folder.</li>
         </ul>
         <p>The author will send a response indicating the next steps in handling your report. After the initial reply to your report, I will keep you informed of the progress towards a fix and full announcement, and may ask for additional information or guidance.</p>
-        <p>Report security bugs in third-party modules (such as Electron, <code>better-sqlite3</code>, or <code>officeparser</code>) to the person or team maintaining the module. You can also report a vulnerability through the <a href="https://www.npmjs.com/support" rel="noopener">npm contact form</a> by selecting "I'm reporting a security vulnerability".</p>
+        <p>Report security bugs in third-party modules (such as Electron, <code>better-sqlite3</code>, or <code>officeparser</code>, <code>@huggingface/transformers</code>, or <code>onnxruntime-node</code>) to the person or team maintaining the module. You can also report a vulnerability through the <a href="https://www.npmjs.com/support" rel="noopener">npm contact form</a> by selecting "I'm reporting a security vulnerability".</p>
       </article>
     </main>
 

@@ -30,6 +30,7 @@
         </a>
         <nav class="site-nav" aria-label="Main navigation">
           <a href="#features">Features</a>
+          <a href="#ai-mode">AI Mode</a>
           <a href="#ocr">Scanned files</a>
           <a href="#file-types">File types</a>
           <a href="#privacy">Privacy</a>
@@ -191,6 +192,66 @@
             </article>
           </div>
         </div>
+      </section>
+
+      <!-- AI Mode -->
+      <section class="section ai-section" id="id-mode" aria-labelledby="ai-title">
+        <div class="wrap ai-band">
+          <div>
+            <p class="eyebrow">New: AI Mode</p>
+            <h2 id="ai-title">Describe it. CherryQuery finds it.</h2>
+            <p class="ai-lead">Can&rsquo;t remember the exact words? Search by meaning instead. With AI Mode on, <code>invoice from last spring</code> finds the bill from April &mdash; even when it never says &ldquo;invoice&rdquo;.</p>
+            <ul class="checks">
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4.5 10.5 3.5 3.5 7.5-8" /></svg><span>Time phrases like <em>last spring</em>, <em>in March</em> or <em>past 3 months</em> narrow results to when files were modified.</span></li>
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4.5 10.5 3.5 3.5 7.5-8" /></svg><span>Works in 100+ languages, even across them &mdash; an English query can find a German <em>Rechnung</em>.</span></li>
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4.5 10.5 3.5 3.5 7.5-8" /></svg><span>A small model runs on your PC: download it once in Settings, remove it any time. Your files and searches never leave your computer.</span></li>
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4.5 10.5 3.5 3.5 7.5-8" /></svg><span>No subscription, no account, no extra cost &mdash; AI Mode runs on your own PC, so there are no usage charges.</span></li>
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4.5 10.5 3.5 3.5 7.5-8" /></svg><span>Scanned PDFs and images are included, through the text <a href="#ocr">text recognition</a> reads from them.</span></li>
+            </ul>
+            <ul class="chips" aria-label="Example AI Mode searches">
+              <li>invoice from last spring</li><li>contract with the landlord</li><li>meeting notes last month</li><li>travel receipts 2024</li>
+            </ul>
+          </div>
+
+          <div class="ai-glow">
+            <div class="app-window" role="img" aria-label="CherryQuery in AI Mode searching for invoice from last spring, showing a German invoice, a rent request and a scanned receipt from March to May 2026">
+              <div class="app-body" aria-hidden="true">
+                <div class="app-search">
+                  <img class="brand-mark" src="/assets/logo.svg" alt="" width="34" height="34" />
+                  <span>invoice from last spring</span>
+                  <span class="ai-pill">
+                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/></svg>
+                    AI Mode
+                  </span>
+                </div>
+                <ul class="app-results">
+                  <li>
+                    <span class="file-badge sun">PDF</span>
+                    <div>
+                      <div class="r-head"><p class="r-name">Rechnung 2026-041 M&uuml;ller Consulting.pdf</p><p class="r-meta">AI match &middot; Apr 22, 2026</p></div>
+                      <p class="r-snippet">Rechnung Nr. 2026-041 &middot; Beratungsleistungen M&auml;rz &middot; Gesamtbetrag 3.480,00 &euro; zahlbar bis 15.05.2026&hellip;</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="file-badge">DOCX</span>
+                    <div>
+                      <div class="r-head"><p class="r-name">Studio rent - May.docx</p><p class="r-meta">AI match &middot; May 3, 2026</p></div>
+                      <p class="r-snippet">Amount due for May: 1,150.00 &middot; Please transfer by the 5th to the account below&hellip;</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="file-badge">JPG</span>
+                    <div>
+                      <div class="r-head"><p class="r-name">Hardware store receipt.jpg</p><p class="r-meta">AI match &middot; Mar 18, 2026</p></div>
+                      <p class="r-snippet">TOTAL 86.40 &middot; PAID BY CARD &middot; Thank you for shopping with us&hellip;</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="type-note wrap">AI Mode is optional and uses multilingual-e5-small (about 135&nbsp;MB), downloaded once from Hugging Face. Time phrases are understood in English. The beginning of each file is used for AI search.</p>
       </section>
 
       <!-- Text recognition (OCR) -->

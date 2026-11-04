@@ -50,19 +50,19 @@
         <p>CherryQuery does not collect personal information from its users. We do not gather any data that can directly identify you, such as your name, address, email, or phone number.</p>
 
         <h2>2. Your Files and the Search Index:</h2>
-        <p>To provide fast search, CherryQuery reads files in the folders you choose to index (by default, your Documents folder) and extracts their text on your device. The extracted text, file names, paths, and modification dates are stored in a local SQLite index (<code>file-index.sqlite</code>) in CherryQuery's application data folder. Your files and their contents are never uploaded or transmitted anywhere.</p>
+        <p>To provide fast search, CherryQuery reads files in the folders you choose to index (by default, your Documents folder) and extracts their text on your device, including the text of email messages and their attachments, of files inside archives such as ZIP, 7z, RAR and tar, and text recognized (OCR) in scanned PDFs and images. The extracted text, file names, paths, and modification dates are stored in a local SQLite index (<code>file-index.sqlite</code>) in CherryQuery's application data folder. When AI Mode is on, CherryQuery also stores numeric representations (embeddings) of the beginning of each file in the same index, so files can be found by meaning. Your files and their contents are never uploaded or transmitted anywhere.</p>
 
         <h2>3. Settings:</h2>
-        <p>Your preferences, such as indexed folders, file types, excluded folders, theme, language, and hotkey, are stored locally in a <code>settings.json</code> file in CherryQuery's application data folder and in the app's local storage. They never leave your device.</p>
+        <p>Your preferences, such as indexed folders, file types, excluded folders, theme, language, text recognition languages, hotkey, and whether AI Mode is on, are stored locally in a <code>settings.json</code> file in CherryQuery's application data folder and in the app's local storage. They never leave your device.</p>
 
         <h2>4. Deleting Your Data:</h2>
-        <p>You can remove all indexed content at any time with the <strong>Clear Index</strong> option in the app. Uninstalling CherryQuery and deleting its application data folder removes the index and settings completely.</p>
+        <p>You can remove all indexed content at any time with the <strong>Clear Index</strong> option in the app. The AI Mode language model can be deleted at any time with <strong>Remove</strong> in Settings &gt; AI Mode. Uninstalling CherryQuery and deleting its application data folder removes the index, downloaded language data, the AI Mode model, and settings completely.</p>
 
         <h2>5. Third-party Sharing:</h2>
         <p>CherryQuery does not share any information with third parties. CherryQuery does not include analytics, telemetry, advertising, or crash reporting services.</p>
 
         <h2>6. Network Access:</h2>
-        CherryQuery does not send your files, search queries, or index to any server. If update checks are enabled, CherryQuery may contact GitHub to check for and download new versions of the app; no personal data or file contents are included in these requests.
+        <p>CherryQuery does not send your files, search queries, or index to any server. If update checks are enabled, CherryQuery may contact GitHub to check for and download new versions of the app; no personal data or file contents are included in these requests. When you add a text recognition language that doesn't ship with the app, CherryQuery downloads its language data once from the jsDelivr CDN (cdn.jsdelivr.net) and stores it in its application data folder; the request contains only the name of the language file. When you click <strong>Download</strong> in Settings &gt; AI Mode, CherryQuery downloads a small language model (multilingual-e5-small) once from Hugging Face (huggingface.co) and stores it in its application data folder; the request contains only the names of the model files. The model then runs on your device, and your files and search queries are never sent to Hugging Face or anywhere else.</p>
 
         <h2>7. License:</h2>
         <p>CherryQuery is proprietary software provided under an End User License Agreement (EULA). For full details regarding your rights and restrictions when using CherryQuery, please refer to the <a href="/terms/">LICENSE</a> file included with this software.</p>
@@ -78,7 +78,7 @@
 
         <p>If you have any questions or concerns regarding our Privacy Policy, please contact us via <a href="https://github.com/jiang-ning/cherry/security/advisories/new" rel="noopener">"Report a Vulnerability"</a> or by email at jiang.ning.dl[at]gmail.com. Your privacy is important to us, and we are committed to addressing any issues promptly and transparently.</p>
 
-        <p class="meta">Last updated: Oct 18, 2026</p>
+        <p class="meta">Last updated: Nov 3, 2026</p>
       </article>
     </main>
 
