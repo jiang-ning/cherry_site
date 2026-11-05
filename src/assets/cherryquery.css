@@ -603,6 +603,19 @@ mark {
 .footer-links { display: flex; flex-wrap: wrap; gap: 1.2rem; }
 .footer-links a { color: var(--muted); text-decoration: none; font-weight: 600; }
 .footer-links a:hover { color: var(--plum); }
+.footer-socials { display: flex; align-items: center; gap: .6rem; }
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--muted);
+  transition: color .15s ease, background-color .15s ease;
+}
+.footer-social:hover { color: var(--plum); background-color: var(--sun-soft); }
+.footer-social:focus-visible { border-radius: 50%; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
@@ -625,7 +638,7 @@ mark {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .btn { transition: none; }
+  .btn, .footer-social { transition: none; }
   .btn:hover { transform: none; }
   .app-search .caret { animation: none; }
   .ai-glow::before, .ai-glow::after, .ai-pill { animation: none; }
