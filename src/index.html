@@ -79,35 +79,42 @@
             </p>
           </div>
 
-          <svg class="hero-art" viewBox="350 60 250 250" fill="none" role="img" aria-label="Illustration of documents with a magnifying glass confirming a match">
-            <defs>
-              <linearGradient id="paper" x1="443" y1="100" x2="550" y2="254" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#FFFFFF" />
-                <stop offset="1" stop-color="#FFFDF8" />
-              </linearGradient>
-            </defs>
-            <circle cx="474" cy="172" r="111" fill="#FFDA6A" fill-opacity=".35" />
-            <g stroke="#4A2638" stroke-linecap="round" stroke-linejoin="round">
-              <g transform="rotate(-12 449 182)">
-                <rect x="397" y="113" width="104" height="139" rx="12" fill="#DDF6F0" stroke-opacity=".22" stroke-width="2" />
-                <path d="M418 144h52m-52 15h39m-39 48h52m-52 15h32" stroke-opacity=".25" stroke-width="5" />
+          <a class="hero-video" id="hero-video" href="https://youtube.com/watch?v=u1sU4lH_Gz8" data-video-id="u1sU4lH_Gz8" target="_blank" rel="noopener noreferrer" aria-label="Play the CherryQuery intro video">
+            <svg class="hero-art" viewBox="350 60 250 250" fill="none" role="img" aria-label="Illustration of documents with a magnifying glass confirming a match">
+              <defs>
+                <linearGradient id="paper" x1="443" y1="100" x2="550" y2="254" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFFFFF" />
+                  <stop offset="1" stop-color="#FFFDF8" />
+                </linearGradient>
+              </defs>
+              <circle cx="474" cy="172" r="111" fill="#FFDA6A" fill-opacity=".35" />
+              <g stroke="#4A2638" stroke-linecap="round" stroke-linejoin="round">
+                <g transform="rotate(-12 449 182)">
+                  <rect x="397" y="113" width="104" height="139" rx="12" fill="#DDF6F0" stroke-opacity=".22" stroke-width="2" />
+                  <path d="M418 144h52m-52 15h39m-39 48h52m-52 15h32" stroke-opacity=".25" stroke-width="5" />
+                </g>
+                <g transform="rotate(9 500 174)">
+                  <path d="M456 98h60l31 31v111a12 12 0 0 1-12 12h-79a12 12 0 0 1-12-12V110a12 12 0 0 1 12-12Z" fill="url(#paper)" stroke-opacity=".35" stroke-width="2" />
+                  <path d="M516 98v23a8 8 0 0 0 8 8h23" fill="#FFF0BD" stroke-opacity=".35" stroke-width="2" />
+                  <path d="M464 152h59m-59 16h43" stroke-opacity=".25" stroke-width="5" />
+                  <rect x="458" y="185" width="69" height="19" rx="5" fill="#FFDA6A" stroke="none" />
+                  <path d="M465 194h43" stroke-width="4" />
+                  <path d="M464 220h50" stroke-opacity=".25" stroke-width="5" />
+                </g>
+                <circle cx="531" cy="229" r="30" fill="#DDF6F0" fill-opacity=".9" stroke-width="5" />
+                <path d="m553 251 24 24" stroke-width="10" />
+                <path d="m519 229 8 8 16-17" stroke="#185C50" stroke-width="4" />
+                <path d="M387 86v12m-6-6h12M571 167v10m-5-5h10" stroke-opacity=".4" stroke-width="2" />
               </g>
-              <g transform="rotate(9 500 174)">
-                <path d="M456 98h60l31 31v111a12 12 0 0 1-12 12h-79a12 12 0 0 1-12-12V110a12 12 0 0 1 12-12Z" fill="url(#paper)" stroke-opacity=".35" stroke-width="2" />
-                <path d="M516 98v23a8 8 0 0 0 8 8h23" fill="#FFF0BD" stroke-opacity=".35" stroke-width="2" />
-                <path d="M464 152h59m-59 16h43" stroke-opacity=".25" stroke-width="5" />
-                <rect x="458" y="185" width="69" height="19" rx="5" fill="#FFDA6A" stroke="none" />
-                <path d="M465 194h43" stroke-width="4" />
-                <path d="M464 220h50" stroke-opacity=".25" stroke-width="5" />
-              </g>
-              <circle cx="531" cy="229" r="30" fill="#DDF6F0" fill-opacity=".9" stroke-width="5" />
-              <path d="m553 251 24 24" stroke-width="10" />
-              <path d="m519 229 8 8 16-17" stroke="#185C50" stroke-width="4" />
-              <path d="M387 86v12m-6-6h12M571 167v10m-5-5h10" stroke-opacity=".4" stroke-width="2" />
-            </g>
-            <circle cx="566" cy="87" r="4" fill="#4A2638" fill-opacity=".25" />
-            <circle cx="384" cy="245" r="5" fill="#FFDA6A" />
-          </svg>
+              <circle cx="566" cy="87" r="4" fill="#4A2638" fill-opacity=".25" />
+              <circle cx="384" cy="245" r="5" fill="#FFDA6A" />
+            </svg>
+            <span class="play-btn" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5.5v13111-6.5-11-6.5Z" />
+              </svg>
+            </span>
+          </a>
         </div>
       </section>
 
@@ -491,5 +498,21 @@
         </div>
       </div>
     </footer>
+    <script>
+      // Load YouTube only on click so the illustration stays visible if the video can't be watched.
+      document.getElementById('hero-video').addEventListener('click', function(e) {
+        e.preventDefault();
+        var frame = document.createElement('iframe');
+        frame.src = 'https://www.youtube-nocookie.com/embed' + encodeURIComponent(this.dataset.videoId) + '?rel=0&autoplay=1';
+        frame.title = 'CherryQuery intro video';
+        frame.referrerPolicy = 'strict-origin-when-cross-origin';
+        frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        frame.allowFullscreen = true;
+        var box = document.createElement('div');
+        box.className = 'hero-video is-playing';
+        box.appendChild(frame);
+        this.replaceWith(box);
+      });
+    </script>
   </body>
 </html>
